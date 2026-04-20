@@ -4,8 +4,7 @@ services:
   backend:
     build: ./backend
     container_name: sso_backend
-    ports:
-      - "8000:8000"
+    # No ports exposed to host directly, accessed via frontend proxy
     environment:
       - DB_NAME=SSO
       - DB_USER=root
@@ -20,7 +19,7 @@ services:
     build: ./frontend
     container_name: sso_frontend
     ports:
-      - "80:80"
+      - "8004:80"
     depends_on:
       - backend
     restart: always
