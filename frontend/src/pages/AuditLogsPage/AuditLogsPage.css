@@ -1,0 +1,104 @@
+.logs-container {
+    background: white;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.logs-table-wrapper {
+    overflow-x: auto;
+}
+
+.logs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.logs-table th {
+    background: #f8fafc;
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 800;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.logs-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.timestamp-wrapper, .details-wrapper, .ip-wrapper, .actor-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+}
+
+.timestamp-wrapper {
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.actor-wrapper {
+    gap: 10px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.mini-avatar {
+    width: 24px;
+    height: 24px;
+    background: #fdf2f8;
+    color: #db2777;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.action-pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* Dynamic colors for actions */
+.action-pill.login { background: #f0fdf4; color: #16a34a; }
+.action-pill.service-launch { background: #eff6ff; color: #2563eb; }
+.action-pill.user-created { background: #fdf2f8; color: #db2777; }
+.action-pill.user-deleted { background: #fef2f2; color: #ef4444; }
+.action-pill.profile-updated { background: #faf5ff; color: #9333ea; }
+
+.details-wrapper {
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+}
+
+.loading-state, .empty-state {
+    padding: 80px;
+    text-align: center;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.header-icon {
+    color: var(--dash-primary);
+    width: 32px;
+    height: 32px;
+}

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Bavya SSO Bridge",
+  "version": "1.2",
+  "description": "Universal Auto-Login for BHSPL Microservices",
+  "permissions": ["tabs", "storage"],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "https://*.bhspl.in/*",
+    "http://*.bhspl.in/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.bhspl.in/*",
+        "http://*.bhspl.in/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
